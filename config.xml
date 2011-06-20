@@ -2,7 +2,7 @@
 <module>
 	<name>protectedshops</name>
 	<displayName>Protected Shops</displayName>
-	<version>0.2</version>
+	<version>0.3</version>
 	<description>Protected Shops AGB connect.</description>
 	<author>touchDesign</author>
 	<tab>tools</tab>

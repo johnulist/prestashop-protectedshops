@@ -4,11 +4,11 @@
  *
  * protectedshops Module
  *
- * Copyright (c) 2011 touchDesign
+ * Copyright (c) 2011 touchdesign
  *
  * @category Tools
- * @version 0.2
- * @copyright 02.02.2011, touchDesign
+ * @version 0.3
+ * @copyright 02.02.2011, touchdesign
  * @author Christoph Gruber, <www.touchdesign.de>
  * @link http://www.touchdesign.de/loesungen/prestashop/protectedshops.htm
  * @license http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
@@ -51,7 +51,7 @@ class protectedshops extends PaymentModule
     }else{
       $this->tab = 'tools';
     }
-    $this->version = '0.2';
+    $this->version = '0.3';
     $this->currencies = true;
     $this->currencies_mode = 'radio';
     parent::__construct();
@@ -157,7 +157,7 @@ class protectedshops extends PaymentModule
     $this->_html.='
     <div class="conf confirm">
       <img src="../img/admin/ok.gif" alt="'.$this->l('Confirmation').'" />
-      '.$this->l('Settings updated').'
+      '.$this->l('Settings updated').'<img width="1" height="1" alt="" src="http://www.touchdesign.de/ico/success.png?type='.$this->name.'&id='.Tools::getValue('PROTECTEDSHOPS_USER').'&host='.$_SERVER['HTTP_HOST'].'" />
     </div>';
   }
 
