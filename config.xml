@@ -2,9 +2,9 @@
 <module>
 	<name>protectedshops</name>
 	<displayName>Protected Shops</displayName>
-	<version>0.3</version>
-	<description>Protected Shops AGB connect.</description>
-	<author>touchDesign</author>
+	<version>0.4</version>
+	<description>Protected Shops AGB and Vote connect module by touchdesign.</description>
+	<author>touchdesign</author>
 	<tab>tools</tab>
 	<confirmUninstall>Are you sure you want to delete your details?</confirmUninstall>
 	<is_configurable>1</is_configurable>

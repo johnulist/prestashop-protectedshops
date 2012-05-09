@@ -31,9 +31,10 @@
  *}
 
 <!-- protectedshops module | http://www.touchdesign.de/ -->
-<div id="protectedshops_logo_block_left" class="paiement_logo_block">
-  <a target="_blank" href="http://www.protectedshops.de/logo?shop_id={$protectedshops_shopid}">
-    <img src="{$module_template_dir}protectedshops.png" width="70" height="70" alt="protectedshops.png" title="Protected Shops" />
+<div id="protectedshops_logo_block_right" class="block">
+  <h4>{l s='Protected Shops' mod='protectedshops'}</h4>
+  <a target="_blank" href="https://www.protectedshops.de/rating/view/{$protectedshops_shopid}">
+    <img src="https://www.protectedshops.de/rating/widget/{$protectedshops_shopid}.gif" width="190" height="184" alt="protectedshops_rating.gif" title="Protected Shops" />
   </a>
 </div>
 <!-- protectedshops module | http://www.touchdesign.de/ -->

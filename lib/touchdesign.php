@@ -9,7 +9,7 @@
  * @category Library
  * @version 0.1
  * @copyright 12.04.2010, touchDesign
- * @author Christoph Gruber, <www.touchdesign.de>
+ * @author Christin Gruber, <www.touchdesign.de>
  * @link http://www.touchdesign.de
  * @license http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  *
@@ -73,18 +73,49 @@ class touchdesign
   
     return $obj;
   }
-
-  static function getCmsDropdown($name)
+  
+  static function widgetDropdown($name,$items,$selected=null)
   {
-    $cmsPages = CMS::listCms(Configuration::get('PS_LANG_DEFAULT'));
-    $html = "<select name='".$name."'>";
-    $html.= "<option value=''>None</option>";
-    
-    foreach($cmsPages AS $k => $v){
-      $html .= "<option ".(Configuration::get(strtoupper($name)) == $v['id_cms'] ? 'selected' : '')." value=".$v['id_cms'].">".$v['meta_title']."</option>";
+
+    if($selected === null) {
+      $selected = Tools::getValue($name) ? Tools::getValue($name,'') : Configuration::get($name);
     }
     
-    return $html."</select>";
+    $result = '<select name="'.$name.'">';
+    foreach ($items as $id => $item) {
+      $result.= '<option value="'.$id.'" ';
+      $result.= $id == $selected ? 'selected="selected"' : '';
+      $result.= '>'.$item.'</option>';
+    }
+    $result.= '</select>';
+    
+    return $result;
+  }
+  
+  static function widgetDropdownOrderStates($name,$selected=null)
+  {
+    global $cookie;
+
+    $orderStates = OrderState::getOrderStates(intval($cookie->id_lang));
+    
+    $items = array();
+    foreach ($orderStates as $state) {
+      $items[$state['id_order_state']] = $state['name'];
+    }
+    
+    return self::widgetDropdown($name,$items,$selected);
+  }
+  
+  static function getCmsDropdown($name,$selected=null)
+  {
+    $cmsPages = CMS::listCms(Configuration::get('PS_LANG_DEFAULT'));
+    
+    $items = array('' => 'None');
+    foreach($cmsPages AS $page){
+      $items[$page['id_cms']] = $page['meta_title'];
+    }
+    
+    return self::widgetDropdown($name,$items,$selected);
   }
 
 }

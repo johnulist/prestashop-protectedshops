@@ -31,9 +31,15 @@
  *}
 
 <!-- protectedshops module | http://www.touchdesign.de/ -->
-<div id="protectedshops_logo_block_left" class="paiement_logo_block">
-  <a target="_blank" href="http://www.protectedshops.de/logo?shop_id={$protectedshops_shopid}">
-    <img src="{$module_template_dir}protectedshops.png" width="70" height="70" alt="protectedshops.png" title="Protected Shops" />
-  </a>
+<div id="protectedshop_rating" style="border:1px solid #efefef;padding:10px;">
+  <div style="float:left;width:72px;">
+    <a target="_blank" href="{$protectedshops_rating}">
+      <img src="{$module_template_dir}protectedshops.png" width="70" height="70" alt="protectedshops.png" title="Protected Shops" />
+    </a>
+  </div>
+  <div style="float:left;text-align:left;padding:30px 0 0 20px;width:80%;">
+    <a target="_blank" href="{$protectedshops_rating}">{l s='Please vote for us on Protected Shops!' mod='protectedshops'}</a>
+  </div>
+  <br class="clear" />
 </div>
 <!-- protectedshops module | http://www.touchdesign.de/ -->
