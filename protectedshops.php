@@ -7,7 +7,7 @@
  * Copyright (c) 2011 touchdesign
  *
  * @category Tools
- * @version 0.4
+ * @version 0.5
  * @copyright 02.02.2011, touchdesign
  * @author Christin Gruber, <www.touchdesign.de>
  * @link http://www.touchdesign.de/loesungen/prestashop/protectedshops.htm
@@ -52,7 +52,7 @@ class protectedshops extends Module
     }else{
       $this->tab = 'tools';
     }
-    $this->version = '0.4';
+    $this->version = '0.5';
     $this->currencies = true;
     $this->currencies_mode = 'radio';
     parent::__construct();
@@ -324,7 +324,7 @@ class protectedshops extends Module
           <label>'.$this->l('Vote connect auto mail').'</label>
           <div class="margin-form">
             '.touchdesign::widgetDropdown('PROTECTEDSHOPS_VOTE_API_MAIL',array('Y' => $this->l('Yes'),'N' => $this->l('No'))).'
-            <p>'.$this->l('Enable vote connect api auto mail? (Note: Please update privacy your rules)').'</p>
+            <p>'.$this->l('Enable vote connect api auto mail? (Note: Please update your privacy rules)').'</p>
           </div>
           <div class="clear"></div>
         </fieldset>

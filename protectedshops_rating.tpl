@@ -6,7 +6,7 @@
  * Copyright (c) 2011 touchdesign
  *
  * @category Tools
- * @version 0.4
+ * @version 0.5
  * @copyright 02.02.2011, touchdesign
  * @author Christin Gruber, <www.touchdesign.de>
  * @link http://www.touchdesign.de/loesungen/prestashop/protectedshops.htm

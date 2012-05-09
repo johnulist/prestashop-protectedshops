@@ -2,7 +2,7 @@
 <module>
 	<name>protectedshops</name>
 	<displayName>Protected Shops</displayName>
-	<version>0.4</version>
+	<version>0.5</version>
 	<description>Protected Shops AGB and Vote connect module by touchdesign.</description>
 	<author>touchdesign</author>
 	<tab>tools</tab>
